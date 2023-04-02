@@ -1,0 +1,13 @@
+import csv
+import time
+with open('data.csv', newline='') as csvfile:
+        data = list(csv.reader(csvfile, delimiter='\t'))
+a=int(input("enter the number of records to be printed or type -1 to get complete data printed: "))
+if a!=-1:        
+    for row in range(0,a+1):
+        print(data[row])
+        time.sleep(1)
+else:
+    for row in data:
+        print(str(row))
+        time.sleep(1)
